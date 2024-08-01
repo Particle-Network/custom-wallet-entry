@@ -28,7 +28,7 @@ To set up the Auth Core Modal, wrap your main component with AuthCoreContextProv
 -   **visible: true** - Shows the default wallet icon entry point
 -   **visible: false** - Completely disables the wallet entry point
 
-### Note: When set to false, **openWallet** won't work, but you can use **buildWalletUrl** to generate a wallet address and display it in a custom iframe.
+### Note: When set to false, **openWallet** and **buildWalletUrl** won't work.
 
 ## Three ways to use the wallet
 
@@ -61,7 +61,19 @@ To set up the Auth Core Modal, wrap your main component with AuthCoreContextProv
 }
 ```
 
-3. Use `visible: false` and `buildWalletUrl` to have full control of the wallet postion
+3. Use `visible: true` and `buildWalletUrl` to have full control of the wallet postion
+
+```css
+.particle-pwe-btn {
+    display: none;
+}
+
+.particle-pwe-iframe-content {
+    top: 50% !important;
+    left: 50% !important;
+    transform: translate(-50%, -50%) !important;
+}
+```
 
 ## Wallet Centering Methods
 
