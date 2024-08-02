@@ -108,6 +108,35 @@ openWallet({
 });
 ```
 
+### Import and use the buildWalletUrl function from Auth Core Modal:
+- The iframeId must be 'particle-auth-core-iframe-wallet'
+
+
+```jsx
+import { useAuthCore } from '@particle-network/auth-core-modal';
+
+const { buildWalletUrl } = useAuthCore();
+
+const [walletUrl, setWalletUrl] = useState<string>('');
+
+setWalletUrl(buildWalletUrl({
+    topMenuType: 'close',
+}))
+
+<div>
+    {walletUrl && (
+        <iframe
+            id="particle-auth-core-iframe-wallet"
+            style={{
+                width: '400px',
+                height: '700px',
+            }}
+            src={walletUrl}
+        />
+    )}
+</div>
+```
+
 ### This code demonstrates how to open the wallet with specific options, such as setting the window size and top menu type.
 
 ### By following these steps, you can effectively customize the wallet's position and appearance in your application using Particle Network's Auth Core Modal.

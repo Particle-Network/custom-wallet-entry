@@ -28,4 +28,12 @@
     border: none;
     font-size: 18px;
 }
- 
+
+.walletUrl {
+    width: 800px;
+    word-wrap: break-word;
+    word-break: break-all;
+    text-overflow: ellipsis;
+    margin-bottom: 20px;
+    text-align: center;
+}
