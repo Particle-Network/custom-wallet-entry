@@ -11,7 +11,7 @@ const toggleParticleWallet = async () => {
 export const iframeLocation = `// The iframe embedded in a modal
 <iframe
     id="particle-auth-core-iframe-wallet"
-    className="w-full h-96 border-0"
+    className="w-96 h-96 border-0"
     src={walletUrl}
 />`;
 

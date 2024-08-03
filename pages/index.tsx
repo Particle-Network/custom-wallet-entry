@@ -115,14 +115,8 @@ const Home: NextPage = () => {
                                 <h3 className="text-2xl font-bold mb-4 text-purple-400">
                                     <pre className="m-0">openWallet</pre>
                                 </h3>
-                                <p
-                                    className="text-gray-300 mb-6 leading-relaxed"
-                                    dangerouslySetInnerHTML={{ __html: openWalletDescription1 }}
-                                />
-                                <p
-                                    className="text-gray-300 mb-6 leading-relaxed"
-                                    dangerouslySetInnerHTML={{ __html: openWalletDescription2 }}
-                                />
+                                <p className="text-gray-300 mb-6 leading-relaxed">{openWalletDescription1}</p>
+                                <p className="text-gray-300 mb-6 leading-relaxed">{openWalletDescription2}</p>
 
                                 <div className="relative group mb-6 flex items-center">
                                     <p className="text-gray-300 mr-2 leading-relaxed">How it's set up in this app:</p>
@@ -146,14 +140,8 @@ const Home: NextPage = () => {
                                 <h3 className="text-2xl font-bold mb-4 text-purple-400">
                                     <pre className="m-0">buildWalletUrl</pre>
                                 </h3>
-                                <p
-                                    className="text-gray-300 mb-6 leading-relaxed"
-                                    dangerouslySetInnerHTML={{ __html: buildWalletUrlDescription1 }}
-                                />
-                                <p
-                                    className="text-gray-300 mb-6 leading-relaxed"
-                                    dangerouslySetInnerHTML={{ __html: buildWalletUrlDescription2 }}
-                                />
+                                <p className="text-gray-300 mb-6 leading-relaxed">{buildWalletUrlDescription1}</p>
+                                <p className="text-gray-300 mb-6 leading-relaxed">{buildWalletUrlDescription2}</p>
 
                                 <div className="relative group mb-6 flex items-center">
                                     <p className="text-gray-300 mr-2 leading-relaxed">Example setup:</p>
@@ -192,7 +180,7 @@ const Home: NextPage = () => {
                                     {walletUrl && (
                                         <iframe
                                             id="particle-auth-core-iframe-wallet"
-                                            className="w-full h-96 border-0"
+                                            className="w-96 h-96 border-0"
                                             src={walletUrl}
                                         />
                                     )}
