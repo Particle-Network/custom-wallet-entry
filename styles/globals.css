@@ -1,3 +1,10 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* In your global CSS or component CSS file */
+@import 'prismjs/themes/prism-tomorrow.css';
+
 html,
 body {
   padding: 0;
@@ -31,6 +38,6 @@ a {
 
 .particle-pwe-iframe-content {
   top: 50% !important;
-  left: 50% !important;
+  left: 15% !important;
   transform: translate(-50%, -50%) !important;
 }
