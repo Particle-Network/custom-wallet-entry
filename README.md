@@ -91,19 +91,16 @@ For more examples on how to use the `customStyle` object, refer to the [Customiz
 
 Here is the improved section:
 
-## Visible Parameter Explanation
+### Visible Parameter Explanation
 
 - **visible: true** - Displays the default wallet icon entry point.
 - **visible: false** - Completely disables the wallet entry point.
 
 > Note: When set to false, **openWallet** and **buildWalletUrl** will NOT function.
 
-## Three Ways to Customize the Wallet Entry Point
+## Two Ways to Customize the Wallet Entry Point
 
-1. **Disable the Wallet Completely**
-   Set `visible: false` to disable the wallet for the user entirely. Use the [AA SDK](https://developers.particle.network/guides/aa/web-aa) to abstract the interactions interactions.
-
-2. **Use a Custom Wallet Entry Point**
+1. **Use a Custom Wallet Entry Point**
    Keep `visible: true`, but create your own wallet entry, such as a button labeled "Open Wallet", and use the `openWallet()` method to open the wallet.
 
    ```jsx
@@ -138,7 +135,7 @@ Here is the improved section:
 
    This method allows limited customization of the modal's display location by modifying the CSS class in your `global.css`.
 
-3. **Custom Integration with Flexibility**
+2. **Custom Integration with Flexibility**
    For more advanced customization and integration, use `visible: true` and `buildWalletUrl()` to have full control of the wallet postion.
 
    The `buildWalletUrl()` method from useAuthCore() allows you to generate a wallet URL that can be embedded within an iframe, you can then place the iframe where you want.
