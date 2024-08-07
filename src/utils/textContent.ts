@@ -1,6 +1,6 @@
 
 export const buildWalletUrlDescription1 = `
-The buildWalletUrl hook from
+The buildWalletUrl() method from
 useAuthCore() allows you to generate a wallet URL that can be embedded within an iframe in your application.
 `;
 
@@ -9,7 +9,7 @@ This method provides greater flexibility, enabling you to embed the iframe anywh
 `;
 
 export const openWalletDescription1 = `
-The openWallet hook from
+The openWallet() method from
 useAuthCore() allows you to open the wallet modal from a custom button.
 `;
 

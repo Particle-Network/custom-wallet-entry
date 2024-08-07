@@ -1,9 +1,8 @@
-import { useAuthCore, useConnect } from '@particle-network/auth-core-modal';
 import type { NextPage } from 'next';
 import { useState, useEffect } from 'react';
 import Prism from 'prismjs';
 import 'prismjs/components/prism-javascript';
-import 'prismjs/themes/prism-tomorrow.css'; // Import the Prism theme
+import 'prismjs/themes/prism-tomorrow.css';
 
 // Import code snippets
 import { openWalletCode, buildWalletUrlCode, particleIframeCss, iframeLocation } from '../src/utils/codeSnippets';
@@ -20,6 +19,9 @@ import {
 import LinksGrid from '../src/components/Links';
 import Header from '../src/components/Header';
 import Tooltip from '../src/components/Tooltip'; // Import the Tooltip component
+
+// Particle imports
+import { useAuthCore, useConnect } from '@particle-network/auth-core-modal';
 
 const Home: NextPage = () => {
     // Connect and wallet hooks
@@ -180,7 +182,8 @@ const Home: NextPage = () => {
                                     {walletUrl && (
                                         <iframe
                                             id="particle-auth-core-iframe-wallet"
-                                            className="w-96 h-96 border-0"
+                                            className="w-96"
+                                            style={{ height: '40rem' }}
                                             src={walletUrl}
                                         />
                                     )}
