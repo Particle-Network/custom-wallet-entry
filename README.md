@@ -135,10 +135,12 @@ Here is the improved section:
 
    This method allows limited customization of the modal's display location by modifying the CSS class in your `global.css`.
 
-2. **Custom Integration with Flexibility**
-   For more advanced customization and integration, use `visible: true` and `buildWalletUrl()` to have full control of the wallet postion.
+Here is the improved section:
 
-   The `buildWalletUrl()` method from useAuthCore() allows you to generate a wallet URL that can be embedded within an iframe, you can then place the iframe where you want.
+2. **Custom Integration with Flexibility**
+   For advanced customization and integration, set `visible: true` and use `buildWalletUrl()` to have full control over the wallet's position.
+
+   The `buildWalletUrl()` method from `useAuthCore()` allows you to generate a wallet URL that can be embedded within an iframe, giving you the freedom to place the iframe wherever you want.
 
     ```tsx
     const { buildWalletUrl } = useAuthCore();
@@ -147,14 +149,13 @@ Here is the improved section:
     const [walletUrl, setWalletUrl] = useState<string>('');
     const [isModalOpen, setIsModalOpen] = useState<boolean>(false);
 
-    // Open the wallet modal from a custom button
-    // With this you can plce the iframe where you want
+    // Generate the wallet URL and open the modal
     const generateWalletUrl = async () => {
         const url = buildWalletUrl({
             topMenuType: 'close',
         });
 
-        // Associate the URL in the state and open the modal
+        // Set the URL in the state and open the modal
         setWalletUrl(url);
         setIsModalOpen(true);
     };
@@ -179,19 +180,26 @@ Here is the improved section:
     }, []);
 
     // Place the iframe in your UI components
-    <iframe
+    return isModalOpen ? (
+        <iframe
             id="particle-auth-core-iframe-wallet"
             className="w-96"
             style={{ height: '40rem' }}
             src={walletUrl}
         />
+    ) : (
+        <button onClick={generateWalletUrl}>Open Wallet</button>
+    );
     ```
 
-    > Note that the iframe ID must be 'particle-auth-core-iframe-wallet'.
+    > Note: The iframe ID must be `particle-auth-core-iframe-wallet`.
 
-    You will also need to update the `particle-pwe-btn` class to hide the original Particle button
+    To hide the original Particle button, update the `particle-pwe-btn` class in your `global.css`:
+
     ```css
     .particle-pwe-btn {
         display: none;
     }
     ```
+
+This approach provides greater flexibility and control over the wallet's behavior and appearance, allowing you to seamlessly integrate it into your application's UI.
