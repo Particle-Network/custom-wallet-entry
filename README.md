@@ -101,6 +101,7 @@ Here is the improved section:
 ## Two Ways to Customize the Wallet Entry Point
 
 1. **Use a Custom Wallet Entry Point with openWallet()**
+
    Keep `visible: true`, but create your own wallet entry, such as a button labeled "Open Wallet", and use the `openWallet()` method to open the wallet.
 
    ```jsx
@@ -138,6 +139,7 @@ Here is the improved section:
 Here is the improved section:
 
 2. **Custom Integration with buildWalletUrl()**
+
    For advanced customization and integration, set `visible: true` and use `buildWalletUrl()` to have full control over the wallet's position.
 
    The `buildWalletUrl()` method from `useAuthCore()` allows you to generate a wallet URL that can be embedded within an iframe, giving you the freedom to place the iframe wherever you want.
