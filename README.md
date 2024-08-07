@@ -136,8 +136,6 @@ Here is the improved section:
 
    This method allows limited customization of the modal's display location by modifying the CSS class in your `global.css`.
 
-Here is the improved section:
-
 2. **Custom Integration with buildWalletUrl()**
 
    For advanced customization and integration, set `visible: true` and use `buildWalletUrl()` to have full control over the wallet's position.
